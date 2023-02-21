@@ -14,5 +14,5 @@ class CovidCase extends Model
     protected $fillable = ['report_date', 'cases'];
 
 //    protected $dates = ['report_date'];
-    protected $hidden = [ 'created_at', 'updated_at' ];
+    protected $hidden = ['created_at', 'updated_at'];
 }

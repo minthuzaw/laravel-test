@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Cache;
 
 class CaseController extends Controller
 {
-    public function index()
+    public function index(): object
     {
-        return CaseResource::collection(Cache::remember('cases', 60*60*24, function (){
+        return CaseResource::collection(Cache::remember('cases', 60 * 60 * 24, function () {
             return CovidCase::all();
         }));
     }
