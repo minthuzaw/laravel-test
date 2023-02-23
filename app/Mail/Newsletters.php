@@ -17,7 +17,6 @@ class Newsletters extends Mailable
      */
     public function __construct()
     {
-        //
     }
 
     /**

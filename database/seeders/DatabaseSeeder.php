@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\CovidCase;
 use App\Models\Newsletter;
 use App\Models\Recipient;
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Newsletter::factory(10)->create();
         Recipient::factory(10)->create();
+        Task::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
