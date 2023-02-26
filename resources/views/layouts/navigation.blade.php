@@ -16,10 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     @feature('task-management')
-                    <x-nav-link :href="route('task.index')" :active="request()->routeIs('task.index')">
+                    <x-nav-link :href="route('tasks.index')" :active="request()->routeIs('task.index')">
                         {{ __('Tasks') }}
                     </x-nav-link>
                     @endfeature
+                    <x-nav-link :href="route('qr')" :active="request()->routeIs('qr')">
+                        {{ __('Qr') }}
+                    </x-nav-link>
                 </div>
             </div>
 
