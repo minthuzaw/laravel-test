@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/lazy-load', function () {
+    return view('lazy-load-image');
+});
 
 
 Route::get('/dashboard', function () {
