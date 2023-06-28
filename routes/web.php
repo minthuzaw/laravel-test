@@ -11,7 +11,6 @@ Route::get('/lazy-load', function () {
     return view('lazy-load-image');
 });
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
