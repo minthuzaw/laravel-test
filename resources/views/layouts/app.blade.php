@@ -12,7 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
     <!-- Scripts -->
-{{--     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/qr-generator.js'])--}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -35,16 +35,16 @@
 </body>
 <script>
     function generateQR() {
-    document.querySelector("#qr-image").style.display = "block";
-    let QRText = document.querySelector("#text").value;
-    if (QRText.trim().length = 0) {
-        document.querySelector("#qr-image .error").innerHTML = "Please enter text";
-        document.querySelector("#img").style.display = "none";
-    } else {
-        document.querySelector("#img").style.display = "block";
-        document.querySelector("#qr-image .error").innerHTML = "";
-        document.querySelector("#img").src = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=" + QRText;
+        document.querySelector("#qr-image").style.display = "block";
+        let QRText = document.querySelector("#text").value;
+        if (QRText.trim().length = 0) {
+            document.querySelector("#qr-image .error").innerHTML = "Please enter text";
+            document.querySelector("#img").style.display = "none";
+        } else {
+            document.querySelector("#img").style.display = "block";
+            document.querySelector("#qr-image .error").innerHTML = "";
+            document.querySelector("#img").src = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=" + QRText;
+        }
     }
-}
 </script>
 </html>
